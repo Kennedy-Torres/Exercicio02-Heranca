@@ -1,0 +1,362 @@
+Index: src/Questao02/Gerente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Questao02/Gerente.java b/src/Questao02/Gerente.java
+new file mode 100644
+--- /dev/null	(date 1701921068201)
++++ b/src/Questao02/Gerente.java	(date 1701921068201)
+@@ -0,0 +1,18 @@
++package Questao02;
++
++public class Gerente extends Empregado{
++    private String nomeGerente;
++
++    @Override
++    public String toString() {
++        return "Gerente{"+"Nome= '"+getNome()+"Idade= "+getIdade()+" , Matricula= '"+getMatricula()+ "', Nome da gerência=" + getNomeGerente() + ", Valor do INSS= '"+ valorInss() + "'}";
++    }
++
++    public String getNomeGerente() {
++        return nomeGerente;
++    }
++
++    public void setNomeGerente(String nomeGerente) {
++        this.nomeGerente = nomeGerente;
++    }
++}
+Index: src/Questao02/Vendedor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Questao02/Vendedor.java b/src/Questao02/Vendedor.java
+new file mode 100644
+--- /dev/null	(date 1701921068149)
++++ b/src/Questao02/Vendedor.java	(date 1701921068149)
+@@ -0,0 +1,27 @@
++package Questao02;
++
++public class Vendedor extends Empregado{
++    private double valorVendas;
++    private int qtdVendas;
++
++    @Override
++    public String toString() {
++        return "Cliente{"+"Nome= '"+getNome()+"Salário= "+getSalario()+"Valor das vendas= '"+getValorVendas()+ "', Quantidade de vendas= " + getQtdVendas() +"}";
++    }
++
++    public double getValorVendas() {
++        return valorVendas;
++    }
++
++    public void setValorVendas(double valorVendas) {
++        this.valorVendas = valorVendas;
++    }
++
++    public int getQtdVendas() {
++        return qtdVendas;
++    }
++
++    public void setQtdVendas(int qtdVendas) {
++        this.qtdVendas = qtdVendas;
++    }
++}
+Index: src/Questao02/Teste.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Questao02/Teste.java b/src/Questao02/Teste.java
+new file mode 100644
+--- /dev/null	(date 1701921068275)
++++ b/src/Questao02/Teste.java	(date 1701921068275)
+@@ -0,0 +1,7 @@
++package Questao02;
++
++public class Teste {
++    public static void main(String[] args) {
++
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f48d425b-e5ad-4c4c-954b-d003a4376d6f\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 7\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2ZC8D0pfysoY0EEWlPtFjudr2Lt\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f48d425b-e5ad-4c4c-954b-d003a4376d6f\" name=\"Changes\" comment=\"\" />\r\n      <created>1701914578769</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1701914578769</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision fe8fd12f463f41088de032a45b8f8001cca096ed)
++++ b/.idea/workspace.xml	(date 1701921068621)
+@@ -1,15 +1,54 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f48d425b-e5ad-4c4c-954b-d003a4376d6f" name="Changes" comment="" />
++    <list default="true" id="f48d425b-e5ad-4c4c-954b-d003a4376d6f" name="Changes" comment="Enunciados">
++      <change afterPath="$PROJECT_DIR$/src/Questao01/Animal.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao01/Cachorro.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao01/Peixe.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao01/Teste.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao02/Cliente.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao02/Empregado.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao02/Gerente.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao02/Pessoa.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao02/Teste.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Questao02/Vendedor.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "Kennedy-Torres"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="fb9da983-c21e-4d56-b664-e8a3e259dd98" />
++        <option name="url" value="https://github.com/Kennedy-Torres/Exercicio02-Heranca.git" />
++      </UrlAndAccount>
++    </option>
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectColorInfo"><![CDATA[{
+   "associatedIndex": 7
+ }]]></component>
+@@ -23,9 +62,38 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "master"
++    "git-widget-placeholder": "master",
++    "ignore.virus.scanning.warn.message": "true"
+   }
+ }]]></component>
++  <component name="RunManager" selected="Application.Teste">
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Main" />
++      <module name="Exercicio02-Heranca" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Questao01.Teste" />
++      <module name="Exercicio02-Heranca" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Questao01.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Teste" />
++        <item itemvalue="Application.Main" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -35,6 +103,56 @@
+       <option name="presentableId" value="Default" />
+       <updated>1701914578769</updated>
+     </task>
++    <task id="LOCAL-00001" summary="Enunciado">
++      <option name="closed" value="true" />
++      <created>1701914860043</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1701914860043</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Enunciados">
++      <option name="closed" value="true" />
++      <created>1701915718729</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1701915718729</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Enunciados">
++      <option name="closed" value="true" />
++      <created>1701915727477</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1701915727477</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Enunciados">
++      <option name="closed" value="true" />
++      <created>1701915911032</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1701915911032</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Enunciado" />
++    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
++    <MESSAGE value="Enunciados" />
++    <option name="LAST_COMMIT_MESSAGE" value="Enunciados" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/Questao02/Pessoa.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Questao02/Pessoa.java b/src/Questao02/Pessoa.java
+new file mode 100644
+--- /dev/null	(date 1701919584374)
++++ b/src/Questao02/Pessoa.java	(date 1701919584374)
+@@ -0,0 +1,31 @@
++package Questao02;
++
++public class Pessoa {
++    private String nome;
++    private int idade;
++    private String sexo;
++
++    public String getNome() {
++        return nome;
++    }
++
++    public void setNome(String nome) {
++        this.nome = nome;
++    }
++
++    public int getIdade() {
++        return idade;
++    }
++
++    public void setIdade(int idade) {
++        this.idade = idade;
++    }
++
++    public String getSexo() {
++        return sexo;
++    }
++
++    public void setSexo(String sexo) {
++        this.sexo = sexo;
++    }
++}
+Index: src/Questao02/Cliente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Questao02/Cliente.java b/src/Questao02/Cliente.java
+new file mode 100644
+--- /dev/null	(date 1701920019625)
++++ b/src/Questao02/Cliente.java	(date 1701920019625)
+@@ -0,0 +1,28 @@
++package Questao02;
++
++public class Cliente extends Pessoa{
++    private double valorDivida;
++    private int anoNascimento;
++
++
++    @Override
++    public String toString() {
++        return "Cliente{"+"Nome= '"+getNome()+"Idade= "+getIdade()+"Sexo= '"+getSexo()+ "', valorDivida=" + getValorDivida() + ", anoNascimento=" + getAnoNascimento() + '}';
++    }
++
++    public double getValorDivida() {
++        return valorDivida;
++    }
++
++    public void setValorDivida(double valorDivida) {
++        this.valorDivida = valorDivida;
++    }
++
++    public int getAnoNascimento() {
++        return anoNascimento;
++    }
++
++    public void setAnoNascimento(int anoNascimento) {
++        this.anoNascimento = anoNascimento;
++    }
++}
+Index: src/Questao02/Empregado.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Questao02/Empregado.java b/src/Questao02/Empregado.java
+new file mode 100644
+--- /dev/null	(date 1701920332277)
++++ b/src/Questao02/Empregado.java	(date 1701920332277)
+@@ -0,0 +1,27 @@
++package Questao02;
++
++public class Empregado extends Pessoa{
++    private double salario;
++    private String matricula;
++
++
++    public double valorInss(){
++        return getSalario()*0.11;
++    }
++
++    public double getSalario() {
++        return salario;
++    }
++
++    public void setSalario(double salario) {
++        this.salario = salario;
++    }
++
++    public String getMatricula() {
++        return matricula;
++    }
++
++    public void setMatricula(String matricula) {
++        this.matricula = matricula;
++    }
++}
